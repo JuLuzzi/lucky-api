@@ -13,7 +13,7 @@ export class AuthRepository extends Repository<User> {
     async singUp(singupDto: SingUpDto){
         const {username,password,name,address,cityId} = singupDto;
 
-        //deberia ser una trx
+        //make a trx and handle errors 
         const createdUser = await this.createUser(username, password);
         const createdAddress = await this.createAddress(address, cityId);
         const createdUserProfile = await this.createUserProfile(createdUser, createdAddress, name);

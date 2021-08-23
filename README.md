@@ -2,7 +2,7 @@
 
 ## Description
 
-User authentication API in Nest.js
+User authentication API in Nest.js.
 
 ## Installation
 

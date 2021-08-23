@@ -16,7 +16,7 @@ export class AuthService {
         private readonly _jwtService: JwtService
     ){}
 
-    async singup(singupDto: SingUpDto): Promise<void> {
+    async singup(singupDto: SingUpDto): Promise<void> { //todo esto debe ser mas simple
         const {username} = singupDto;
         const userExist = await this._authRepository.findOne({
             where: { username }

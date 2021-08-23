@@ -1,31 +1,46 @@
 # Lucky API
 
-Description
+## Description
+
 User authentication API in Nest.js
 
-Installation
+## Installation
+
+```bash
 $ npm install
+```
 
-Running the Postgres DB
+## Running the Postgres DB
+
+```bash
 docker run -d -p 5444:5432 --name my-postgres -e POSTGRES_PASSWORD=password postgres
+```
 
-Initializing the DB
+## Initializing the DB
+
+```bash
 npm run migration:run
+```
 
-Running the app
+## Running the app
+
+```bash
 npm run start
+```
 
-Endpoints
+## Endpoints
 
-1- Creates a user given (username,password,name,anddres,cityId).
+**1-** Creates a user given (username,password,name,anddres,cityId).
 
-URL
+#### URL
+
 http://localhost:8000/api/auth/singup
 
-Method
+#### Method
+
 POST
 
-Data Params
+#### Data Params
 
 {
 "username": "myName",
@@ -35,25 +50,29 @@ Data Params
 "cityId": 3
 }
 
+#### Success Response
+
 Code: 201
 Content: None
 
-2- Returns a valid JWT token given (username,password).
+**2-** Returns a valid JWT token given (username,password).
 
-URL
+#### URL
+
 http://localhost:8000/api/auth/singin
 
-Method
+#### Method
+
 POST
 
-Data Params
+#### Data Params
 
 {
 "username": "myName",
 "password": "myPassword",
 }
 
-Success Response
+#### Success Response
 
 Code: 201
 Content:
@@ -61,18 +80,21 @@ Content:
 "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVC"
 }
 
-3- Return a relevant user profile given a valid JWT token in a Authorization header.
+**3-** Return a relevant user profile given a valid JWT token in a Authorization header.
 
-URL
+#### URL
+
 http://localhost:8000/api/user/:id
 
-Method
+#### Method
+
 GET
 
-Required header
+#### Required header
+
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 
-Success Response
+#### Success Response
 
 Code: 200
 Content:

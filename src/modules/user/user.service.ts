@@ -3,10 +3,10 @@ import { getConnection } from "typeorm";
 import { InjectRepository } from '@nestjs/typeorm';
 import { Address } from '../address/address.entity';
 import { AddressDto } from '../address/dto/addres.dto';
-import { UserProfileDto } from './dto/user.profile.dto';
+import { UserProfileDto } from './dto/user-profile.dto';
 import { User } from './user.entity';
-import { UserProfile } from './user.profile.entity';
-import { UserProfileRepository } from './user.profile.repository';
+import { UserProfile } from './user-profile.entity';
+import { UserProfileRepository } from './user-profile.repository';
 import { UserRepository } from './user.repository';
 
 @Injectable()

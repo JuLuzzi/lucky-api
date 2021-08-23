@@ -1,7 +1,7 @@
 import { Controller, Get, Param, ParseIntPipe, UseGuards } from '@nestjs/common';
 import { UserProfileService } from './user.service';
 import { AuthGuard } from '@nestjs/passport';
-import { UserProfileDto } from './dto/user.profile.dto';
+import { UserProfileDto } from './dto/user-profile.dto';
 
 @Controller('user')
 export class UserController {

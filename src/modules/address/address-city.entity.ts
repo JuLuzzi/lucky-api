@@ -1,5 +1,5 @@
 import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { Country } from './address.country.entity';
+import { Country } from './address-country.entity';
 
 @Entity('cities')
 export class City extends BaseEntity {
@@ -8,7 +8,6 @@ export class City extends BaseEntity {
     id: number;
 
     @OneToOne(type => Country, {
-        cascade: true,
         nullable: false,
         eager: true,
     })

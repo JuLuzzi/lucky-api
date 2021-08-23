@@ -1,9 +1,9 @@
 import { getConnection , EntityRepository, Repository } from "typeorm";
-import { City } from "../address/address.city.entity";
-import { CityRepository } from "../address/address.city.repository";
+import { City } from "../address/address-city.entity";
+import { CityRepository } from "../address/address-city.repository";
 import { Address } from "../address/address.entity";
 import { User } from "../user/user.entity";
-import { UserProfile } from "../user/user.profile.entity";
+import { UserProfile } from "../user/user-profile.entity";
 import { SingUpDto } from "./dto";
 import { genSalt, hash } from 'bcryptjs';
 import { AddressRepository } from "../address/address.repository";
